@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Heron's Formula</h1>
+    <h2>Heron's Formula</h2>
     <form id="herons" onsubmit="return false">
         <label for="side-a">Side a:</label><br>
         <input type="text" id="side-a" name="side-a"><br>
@@ -17,6 +17,18 @@
         <input type="text" id="side-b" name="side-b"><br>
         <label for="side-c">Side c:</label><br>
         <input type="text" id="side-c" name="side-c"><br>
+        <label for="result">Area (Result):</label><br>
+        <input type="text" id="result" name="result"><br>
+        <input type="submit" value = "Submit">
+    </form>
+    <h2>Ambiguous Case</h2>
+    <form id="ambi" onsubmit="return false">
+        <label for="angle-a">Angle A:</label><br>
+        <input type="text" id="angle-a" name="angle-a"><br>
+        <label for="side-a">Side a:</label><br>
+        <input type="text" id="side-a" name="side-a"><br>
+        <label for="side-b">Side b:</label><br>
+        <input type="text" id="side-b" name="side-b"><br>
         <label for="result">Area (Result):</label><br>
         <input type="text" id="result" name="result"><br>
         <input type="submit" value = "Submit">
