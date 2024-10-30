@@ -60,3 +60,15 @@ const ambiFormula = (ang, a, b) => {
         return "error";
     }
 }
+
+const newton = document.getElementById("newton");
+
+newton.addEventListener("submit", () => {
+    document.getElementById("result-3").value = newtonMethod(
+        ambi.elements['g-value'].value
+    )
+});
+
+const newtonMethod = (g) => {
+
+}

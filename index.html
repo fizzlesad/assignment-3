@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <h2>Heron's Formula</h2>
     <form id="herons" onsubmit="return false">
@@ -19,7 +21,7 @@
         <input type="text" id="side-c" name="side-c"><br>
         <label for="result">Area (Result):</label><br>
         <input type="text" id="result" name="result"><br>
-        <input type="submit" value = "Submit">
+        <input type="submit" value="Calculate">
     </form>
     <h2>Ambiguous Case</h2>
     <form id="ambi" onsubmit="return false">
@@ -29,9 +31,18 @@
         <input type="text" id="side-a" name="side-a"><br>
         <label for="side-b">Side b:</label><br>
         <input type="text" id="side-b" name="side-b"><br>
-        <label for="result">Area (Result):</label><br>
-        <input type="text" id="result-2" name="result"><br>
-        <input type="submit" value = "Submit">
+        <label for="result">Triangle Type (Result):</label><br>
+        <input type="text" id="result-2" name="result-2"><br>
+        <input type="submit" value="Calculate">
+    </form>
+    <h2>Newton's Method</h2>
+    <form id="newton" onsubmit="return false">
+        <label for="g-value">Root Guess:</label><br>
+        <input type="text" id="g-value" name="g-value"><br>
+        <label for="result">Root Approximation (Result):</label><br>
+        <input type="text" id="result-3" name="result-3"><br>
+        <input type="submit" value="Calculate">
     </form>
 </body>
+
 </html>
