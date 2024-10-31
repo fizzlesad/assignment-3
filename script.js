@@ -65,10 +65,27 @@ const newton = document.getElementById("newton");
 
 newton.addEventListener("submit", () => {
     document.getElementById("result-3").value = newtonMethod(
-        ambi.elements['g-value'].value
+        newton.elements['g-value'].value
     )
 });
 
 const newtonMethod = (g) => {
+    return (g - (6 * Math.pow(g, 4) - 13 * Math.pow(g, 3) - 18 * Math.pow(g, 2) + 7 * g + 6) / (24 * Math.pow(g, 3) - 39 *
+        Math.pow(g, 2) - 36 * g + 7))
+}
 
+const poly = document.getElementById("poly");
+
+newton.addEventListener("submit", () => {
+    document.getElementById("result-4-1").value = polynomialFormula(
+        poly.elements['coefficients'].value,
+        poly.elements['exponents'].value,
+        poly.elements['x-value'].value
+    )
+});
+
+const polynomialFormula = (coefficients, exponents, x) => {
+    const coefficientValues = coefficients.split(" ");
+    const exponentValues = exponents.split(" ");
+    const xValue = x;
 }
