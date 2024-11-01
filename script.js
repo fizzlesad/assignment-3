@@ -72,11 +72,10 @@ newton.addEventListener("submit", () => {
 const newtonMethod = (g) => {
     root = (g - (6 * Math.pow(g, 4) - 13 * Math.pow(g, 3) - 18 * Math.pow(g, 2) + 7 * g + 6) / (24 * Math.pow(g, 3) - 39 *
         Math.pow(g, 2) - 36 * g + 7));
-    while (root - g > 0.1) {
+    while (root - g >= 0.00001) {
         g = root;
         root = (g - (6 * Math.pow(g, 4) - 13 * Math.pow(g, 3) - 18 * Math.pow(g, 2) + 7 * g + 6) / (24 * Math.pow(g, 3) - 39 *
             Math.pow(g, 2) - 36 * g + 7));
-        console.log(root);
     }
     return(root);
 }
