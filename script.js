@@ -70,22 +70,62 @@ newton.addEventListener("submit", () => {
 });
 
 const newtonMethod = (g) => {
-    return (g - (6 * Math.pow(g, 4) - 13 * Math.pow(g, 3) - 18 * Math.pow(g, 2) + 7 * g + 6) / (24 * Math.pow(g, 3) - 39 *
-        Math.pow(g, 2) - 36 * g + 7))
+    root = (g - (6 * Math.pow(g, 4) - 13 * Math.pow(g, 3) - 18 * Math.pow(g, 2) + 7 * g + 6) / (24 * Math.pow(g, 3) - 39 *
+        Math.pow(g, 2) - 36 * g + 7));
+    while (root - g > 0.1) {
+        g = root;
+        root = (g - (6 * Math.pow(g, 4) - 13 * Math.pow(g, 3) - 18 * Math.pow(g, 2) + 7 * g + 6) / (24 * Math.pow(g, 3) - 39 *
+            Math.pow(g, 2) - 36 * g + 7));
+        console.log(root);
+    }
+    return(root);
 }
 
 const poly = document.getElementById("poly");
 
-newton.addEventListener("submit", () => {
-    document.getElementById("result-4-1").value = polynomialFormula(
+poly.addEventListener("submit", () => {
+    document.getElementById("result-4-1").value = polynomialFunction(
+        poly.elements['coefficients'].value,
+        poly.elements['exponents'].value
+    )
+    document.getElementById("result-4-2").value = polynomialEvaluation(
         poly.elements['coefficients'].value,
         poly.elements['exponents'].value,
         poly.elements['x-value'].value
     )
 });
 
-const polynomialFormula = (coefficients, exponents, x) => {
+const polynomialFunction = (coefficients, exponents) => {
     const coefficientValues = coefficients.split(" ");
     const exponentValues = exponents.split(" ");
-    const xValue = x;
+    coefficientCount = coefficientValues.length;
+    let i = 0;
+    let responseOne = "f(x)=";
+    while (i <= coefficientCount) {
+        if (coefficientValues[i] > 0 || coefficientValues[i] < 0) {
+            responseOne += coefficientValues[i] + "x^" + exponentValues[i];
+        }
+        else {
+            responseOne == responseOne;
+        }
+        if (i >= 0 && i < coefficientCount - 1 && coefficientValues[i + 1] > 0) {
+            responseOne += "+";
+        }
+        i++;
+    }
+    return (responseOne);
+}
+
+const polynomialEvaluation = (coefficients, exponents, x) => {
+    const coefficientValues = coefficients.split(" ");
+    const exponentValues = exponents.split(" ");
+    coefficientCount = coefficientValues.length;
+    let i = 0;
+    let ans = 0;
+    while (i < coefficientCount) {
+        ans += coefficientValues[i] * Math.pow(x, exponentValues[i])
+        i++;
+    }
+    let responseOne = "f(" + x + ")=" + ans;
+    return (responseOne);
 }

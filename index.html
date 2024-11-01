@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,54 +8,65 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-
 <body>
-    <h2>Heron's Formula</h2>
-    <form id="herons" onsubmit="return false">
-        <label for="side-a">Side a:</label><br>
-        <input type="text" id="side-a" name="side-a"><br>
-        <label for="side-b">Side b:</label><br>
-        <input type="text" id="side-b" name="side-b"><br>
-        <label for="side-c">Side c:</label><br>
-        <input type="text" id="side-c" name="side-c"><br>
-        <label for="result">Area (Result):</label><br>
-        <input type="text" id="result" name="result"><br>
-        <input type="submit" value="Calculate">
-    </form>
-    <h2>Ambiguous Case</h2>
-    <form id="ambi" onsubmit="return false">
-        <label for="angle-a">Angle A:</label><br>
-        <input type="text" id="angle-a" name="angle-a"><br>
-        <label for="side-a">Side a:</label><br>
-        <input type="text" id="side-a" name="side-a"><br>
-        <label for="side-b">Side b:</label><br>
-        <input type="text" id="side-b" name="side-b"><br>
-        <label for="result">Triangle Type (Result):</label><br>
-        <input type="text" id="result-2" name="result-2"><br>
-        <input type="submit" value="Calculate">
-    </form>
-    <h2>Newton's Method</h2>
-    <form id="newton" onsubmit="return false">
-        <label for="g-value">Root Guess:</label><br>
-        <input type="text" id="g-value" name="g-value"><br>
-        <label for="result">Root Approximation (Result):</label><br>
-        <input type="text" id="result-3" name="result-3"><br>
-        <input type="submit" value="Calculate">
-    </form>
-    <h2>Polynomial Function</h2>
-    <form id="poly" onsubmit="return false">
-        <label for="coefficients">Coefficients:</label><br>
-        <input type="text" id="coefficients" name="coefficients"><br>
-        <label for="exponents">Exponents:</label><br>
-        <input type="text" id="exponents" name="exponents"><br>
-        <label for="x-value">x Value:</label><br>
-        <input type="text" id="x-value" name="x-value"><br>
-        <label for="result">Polynomial Function (Result):</label><br>
-        <input type="text" id="result-4-1" name="result-4-1"><br>
-        <label for="result">Polynomial Evaluation(Result):</label><br>
-        <input type="text" id="result-4-2" name="result-4-2"><br>
-        <input type="submit" value="Calculate">
-    </form>
-</body>
+    <div class="grid-container">
+        <div class="container">
+            <h2>Heron's Formula</h2>
+            <form id="herons" onsubmit="return false">
+                <label for="side-a">Side a:</label>
+                <input type="text" id="side-a" name="side-a">
+                <label for="side-b">Side b:</label>
+                <input type="text" id="side-b" name="side-b">
+                <label for="side-c">Side c:</label>
+                <input type="text" id="side-c" name="side-c">
+                <label for="result">Area (Result):</label>
+                <input type="text" id="result" name="result" disabled>
+                <input type="submit" value="Calculate">
+            </form>
+        </div>
 
+        <div class="container">
+            <h2>Ambiguous Case</h2>
+            <form id="ambi" onsubmit="return false">
+                <label for="angle-a">Angle A:</label>
+                <input type="text" id="angle-a" name="angle-a">
+                <label for="side-a">Side a:</label>
+                <input type="text" id="side-a" name="side-a">
+                <label for="side-b">Side b:</label>
+                <input type="text" id="side-b" name="side-b">
+                <label for="result">Triangle Type (Result):</label>
+                <input type="text" id="result-2" name="result-2" disabled>
+                <input type="submit" value="Calculate">
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Newton's Method</h2>
+            <form id="newton" onsubmit="return false">
+                <label for="g-value">Root Guess:</label>
+                <input type="text" id="g-value" name="g-value">
+                <label for="result">Root Approximation (Result):</label>
+                <input type="text" id="result-3" name="result-3" disabled>
+                <input type="submit" value="Calculate">
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Polynomial Function</h2>
+            <form id="poly" onsubmit="return false">
+                <label for="coefficients">Coefficients:</label>
+                <input type="text" id="coefficients" name="coefficients">
+                <label for="exponents">Exponents:</label>
+                <input type="text" id="exponents" name="exponents">
+                <label for="x-value">x Value:</label>
+                <input type="text" id="x-value" name="x-value">
+                <label for="result">Polynomial Function (Result):</label>
+                <input type="text" id="result-4-1" name="result-4-1" disabled>
+                <label for="result">Polynomial Evaluation (Result):</label>
+                <input type="text" id="result-4-2" name="result-4-2" disabled>
+                <input type="submit" value="Calculate">
+            </form>
+        </div>
+    </div>
+</body>
 </html>
